@@ -1,0 +1,100 @@
+<?xml version="1.0" standalone="no"?>
+
+<OPTIONS Product="System Admin tool" Version="3.2" Author="Matthew S Grossman">
+
+ <Elevate Enabled="False" Comment="Allows script to be run with admin privileges"/>
+ <Search Comment="Properties to show when searching for computers. Property names are from ADSI Attribute Editor.">
+  <Property>DNSHostName</Property>
+  <Property>OperatingSystem</Property>
+  <Property>OperatingSystemVersion</Property>
+  <Property>WhenChanged</Property>
+ </Search>
+  <SearchU Comment="Properties to show when searching for log in user. Property names are from ADSI Attribute Editor.">			
+	<Property>SamAccountName</Property>
+	<Property>DisplayName</Property>
+    <Property>Enabled</Property>
+	<Property>LockedOut</Property>
+	<Property>LastLogonDate</Property>
+	<Property>office</Property>
+	<Property>site</Property>
+ </SearchU>
+   <SearchF Comment="Properties to show when searching for log in user. Property names are from ADSI Attribute Editor.">			
+	<Property>ClientName</Property>
+	<Property>UserName</Property>
+    <Property>TimeCreated</Property>
+ </SearchF>
+ <SystemInfo Comment="Information returned when querying System Info">
+  <General Enabled="True">
+   <ComputerName Enabled="True"/>
+   <DomainLocation Enabled="True"/>
+   <CurrentUser Enabled="True"/>
+   <LogonTime Enabled="True"/>
+   <ScreensaverTime Enabled="True"/>
+   <LastRestart Enabled="True"/>
+  </General>
+  <Build Enabled="True">
+   <Manufacturer Enabled="True"/>
+   <Model Enabled="True"/>
+   <Chassis Enabled="True"/>
+   <Serial Enabled="True"/>
+  </Build>
+  <Hardware Enabled="True">
+   <CPU Enabled="True"/>
+   <RAM Enabled="True"/>
+   <HD Enabled="True"/>
+   <OpticalDrive Enabled="True"/>
+   <GPU Enabled="True"/>
+   <Monitor Enabled="True"/>
+  </Hardware>
+  <OS Enabled="True">
+   <OS Enabled="True"/>
+   <ServicePack Enabled="True"/>
+   <Architecture Enabled="True"/>
+   <ImageDate Enabled="True"/>
+  </OS>
+  <IPConfig Enabled="True">
+   <Description Enabled="True"/>
+   <IPAddress Enabled="True"/>
+   <MACAddress Enabled="True"/>
+   <DHCPEnabled Enabled="False"/>
+   <DHCPServer Enabled="False"/>
+   <DNSDomain Enabled="False"/>
+  </IPConfig>
+  <AntiVirus Enabled="False" Comment="Only works on clients (Vista+)">
+   <Name Enabled="True"/>
+   <DefinitionStatus Enabled="True"/>
+   <RealTimeProtection Enabled="True"/>
+   <Executable Enabled="True"/>
+  </AntiVirus>
+ </SystemInfo>
+ <SearchGP>
+  <Property>name</Property>
+ </SearchGP>
+ <Applications>
+  <Property>Name</Property>
+  <Property>Vendor</Property>
+  <Property>Version</Property>
+  <Property>InstallDate</Property>
+ </Applications>
+ <APPvItems Comment="Display all deploy App-v packages">
+  <Property>Name</Property>
+  <Property>Version</Property>
+  <Property>PercentLoaded</Property>
+  <Property>Path</Property>
+ </APPvItems>
+ <Processes>
+  <Property>ProcessID</Property>
+  <Property>Name</Property>
+  <Property>ExecutablePath</Property>
+  <Property>Owner</Property>
+ </Processes>
+ <Services>
+  <Property>Name</Property>
+  <Property>DisplayName</Property>
+  <Property>State</Property>
+  <Property>StartMode</Property>
+ </Services>
+ <Websites>
+  <Website Name="" URL=""/>
+ </Websites>
+</OPTIONS>
